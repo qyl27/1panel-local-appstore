@@ -1,0 +1,22 @@
+{
+  "repo": [
+    {
+      "name": "Official",
+      "upstream_repo": "https://github.com/1Panel-dev/appstore.git",
+      "upstream_ref": "main",
+      "apps": [
+        "openlist",
+        "oceanbase"
+      ]
+    },
+    {
+      "name": "UserRepo",
+      "upstream_repo": "https://github.com/qyl27/1panel-user-appstore.git",
+      "upstream_ref": "main",
+      "apps": [
+        "mautrix-telegram",
+        "sub-store"
+      ]
+    }
+  ]
+}

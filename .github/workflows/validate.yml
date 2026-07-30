@@ -1,0 +1,34 @@
+name: Validate
+
+on:
+  push:
+    # dist is the orphan publish branch, no sources to validate.
+    branches-ignore: [dist]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+
+      - name: Shellcheck
+        shell: bash
+        run: shellcheck scripts/*.sh
+
+      - name: Build dist
+        shell: bash
+        env:
+          CLEAN_BUILD: true
+          OUTPUT_DIR: ${{ runner.temp }}/dist
+          WORKDIR: ${{ runner.temp }}/build
+        run: bash scripts/dist.sh

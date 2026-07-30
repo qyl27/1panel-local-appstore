@@ -1,0 +1,53 @@
+name: Publish dist
+
+on:
+  workflow_dispatch:
+    inputs:
+      clean_build:
+        description: "Skip the freshness check and force republish dist"
+        type: boolean
+        default: false
+  schedule:
+    - cron: "0 20 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-dist
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+
+      - name: Build dist
+        id: build
+        shell: bash
+        env:
+          # inputs context is not available on schedule runs, false as default.
+          CLEAN_BUILD: ${{ inputs.clean_build || false }}
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ github.sha }}
+          OUTPUT_DIR: ${{ runner.temp }}/dist
+          WORKDIR: ${{ runner.temp }}/build
+        run: bash scripts/dist.sh
+
+      - name: Publish orphan dist branch
+        if: steps.build.outputs.should_skip != 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DIST_DIR: ${{ runner.temp }}/dist
+        run: bash scripts/publish-dist.sh
+
+      - name: Write job summary
+        shell: bash
+        env:
+          SKIPPED: ${{ steps.build.outputs.should_skip == 'true' }}
+          DIST_JSON: ${{ runner.temp }}/dist/dist.json
+        run: bash scripts/write-job-summary.sh
