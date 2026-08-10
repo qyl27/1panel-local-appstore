@@ -10,12 +10,13 @@
       ]
     },
     {
-      "name": "UserRepo",
+      "name": "qyl27-1panel-user-repo",
       "upstream_repo": "https://github.com/qyl27/1panel-user-appstore.git",
       "upstream_ref": "main",
       "apps": [
         "mautrix-telegram",
-        "sub-store"
+        "sub-store",
+        "cli-proxy-api"
       ]
     }
   ]
