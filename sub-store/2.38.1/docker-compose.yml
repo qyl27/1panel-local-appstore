@@ -1,0 +1,27 @@
+services:
+  sub-store:
+    image: xream/sub-store:2.38.1
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:3001"
+    volumes:
+      - ./data:/opt/app/data
+    environment:
+      TZ: Asia/Shanghai
+      SUB_STORE_FRONTEND_HOST: 0.0.0.0
+      SUB_STORE_FRONTEND_PORT: 3001
+      SUB_STORE_BACKEND_API_HOST: 127.0.0.1
+      SUB_STORE_BACKEND_API_PORT: 3000
+      SUB_STORE_FRONTEND_BACKEND_PATH: /${SUB_STORE_BACKEND_PATH}
+      SUB_STORE_BACKEND_SYNC_CRON: "${SUB_STORE_BACKEND_SYNC_CRON}"
+      SUB_STORE_CORS_ALLOWED_ORIGINS: "${SUB_STORE_CORS_ALLOWED_ORIGINS}"
+      SUB_STORE_PUSH_SERVICE: "${SUB_STORE_PUSH_SERVICE}"
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
