@@ -1,0 +1,30 @@
+additionalProperties:
+  formFields:
+    - default: 8317
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: "API 端口"
+      labelEn: "API Port"
+      label:
+        zh: "API 端口"
+        en: "API Port"
+      description:
+        zh: "代理 API 与管理 WebUI 共用的访问端口。"
+        en: "Port shared by the proxy API and management WebUI."
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: MANAGEMENT_PASSWORD
+      labelZh: "WebUI 管理 Token"
+      labelEn: "WebUI Management Token"
+      label:
+        zh: "WebUI 管理 Token"
+        en: "WebUI Management Token"
+      description:
+        zh: "留空则关闭WebUI管理。"
+        en: "Leave blank to disable webui management."
+      random: false
+      required: false
+      type: password

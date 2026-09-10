@@ -1,0 +1,11 @@
+host: ""
+port: 8317
+
+auth-dir: "/root/.cli-proxy-api"
+
+api-keys: 
+  - "your-api-key-1"
+
+plugins:
+  enabled: false
+  dir: "/CLIProxyAPI/plugins"
