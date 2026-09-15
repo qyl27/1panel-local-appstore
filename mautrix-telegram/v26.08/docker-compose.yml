@@ -1,0 +1,17 @@
+services:
+  mautrix-telegram:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/data
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:29317"
+    image: dock.mau.dev/mautrix/telegram:v26.08
+    labels:  
+      createdBy: "Apps"
+
+networks:  
+  1panel-network:  
+    external: true

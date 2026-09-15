@@ -1,0 +1,38 @@
+{
+  "build_time": "2026-09-15T22:42:31Z",
+  "source_sha": "3f12790b5a5a1f40319d1f2cc09d24c1b2792da4",
+  "upstream": [
+    {
+      "name": "Official",
+      "upstream_repo": "https://github.com/1Panel-dev/appstore.git",
+      "upstream_sha": "1f3c2de812fbd51bd77185be1f0e8c96592527a1"
+    },
+    {
+      "name": "qyl27-1panel-user-repo",
+      "upstream_repo": "https://github.com/qyl27/1panel-user-appstore.git",
+      "upstream_sha": "4c7afeb5a2b724490030e827674aaecf2546d3c0"
+    }
+  ],
+  "apps": [
+    {
+      "name": "openlist",
+      "upstream": "Official"
+    },
+    {
+      "name": "oceanbase",
+      "upstream": "Official"
+    },
+    {
+      "name": "mautrix-telegram",
+      "upstream": "qyl27-1panel-user-repo"
+    },
+    {
+      "name": "sub-store",
+      "upstream": "qyl27-1panel-user-repo"
+    },
+    {
+      "name": "cli-proxy-api",
+      "upstream": "qyl27-1panel-user-repo"
+    }
+  ]
+}
