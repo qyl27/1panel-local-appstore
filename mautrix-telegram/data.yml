@@ -1,0 +1,27 @@
+name: mautrix-telegram
+tags:
+    - 实用工具
+title: Matrix 与 Telegram 的桥接服务
+description: Matrix 与 Telegram 的应用服务桥接器，支持傀儡账号和中继模式。
+additionalProperties:
+  key: mautrix-telegram
+  name: mautrix-telegram
+  tags:
+    - Tool
+  shortDescZh: Matrix 与 Telegram 的桥接服务
+  shortDescEn: A Matrix-Telegram puppeting and relay bridge
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/mautrix/telegram
+  github: https://github.com/mautrix/telegram
+  document: https://docs.mau.fi/bridges/go/telegram/index.html
+  description:
+    en: A Matrix-Telegram application service bridge with puppeting and relay support.
+    zh: Matrix 与 Telegram 的应用服务桥接器，支持傀儡账号和中继模式。
+    zh-Hant: Matrix 與 Telegram 的應用服務橋接器，支援傀儡帳號和中繼模式。
+    ja: Matrix と Telegram を接続するアプリケーションサービスブリッジです。
+    ms: Jambatan perkhidmatan aplikasi Matrix dan Telegram dengan sokongan puppeting dan relay.
+    pt-br: Uma ponte de servico de aplicativo entre Matrix e Telegram com suporte a puppeting e relay.
+    ru: Мост Matrix и Telegram на базе application service с поддержкой puppeting и relay.
+    ko: Matrix와 Telegram을 연결하는 애플리케이션 서비스 브리지입니다.
