@@ -1,0 +1,24 @@
+additionalProperties:
+  formFields:
+    - default: 29317
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Appservice Port
+      labelZh: 应用服务端口
+      label:
+        en: Appservice Port
+        es-es: Puerto del servicio de aplicacion
+        ja: アプリサービスのポート
+        ms: Port Perkhidmatan Aplikasi
+        pt-br: Porta do servico de aplicativo
+        ru: Порт application service
+        ko: 애플리케이션 서비스 포트
+        zh: 应用服务端口
+        zh-Hant: 應用服務連接埠
+        tr: Uygulama Servisi Baglanti Noktasi
+      description:
+        en: Port exposed for the Matrix homeserver to connect to mautrix-telegram.
+        zh: 暴露给 Matrix homeserver 连接 mautrix-telegram 的端口。
+      required: true
+      rule: paramPort
+      type: number

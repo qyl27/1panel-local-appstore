@@ -1,0 +1,105 @@
+additionalProperties:
+  formFields:
+    - default: 3001
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web 端口
+      label:
+        en: Web Port
+        zh: Web 端口
+        zh-Hant: Web 連接埠
+        ja: Web ポート
+        ko: Web 포트
+        ms: Port Web
+        pt-br: Porta Web
+        ru: Web-порт
+        tr: Web Bağlantı Noktası
+      description:
+        en: Port exposed for the Sub-Store frontend.
+        zh: Sub-Store 前端访问端口。
+      required: true
+      rule: paramPort
+      type: number
+    - default: substoreapi
+      edit: true
+      envKey: SUB_STORE_BACKEND_PATH
+      labelEn: Backend Path Segment
+      labelZh: 后端路径段
+      label:
+        en: Backend Path Segment
+        zh: 后端路径段
+        zh-Hant: 後端路徑段
+        ja: バックエンドパス
+        ko: 백엔드 경로
+        ms: Segmen Laluan Backend
+        pt-br: Segmento do caminho do backend
+        ru: Сегмент пути backend
+        tr: Backend Yol Parçası
+      description:
+        en: Used as /<segment> for the local backend API. Change it to a random plain string and avoid symbols.
+        zh: 将作为 /<路径段> 暴露本地后端 API。建议改成随机普通字符串，不要包含特殊符号。
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: "55 23 * * *"
+      edit: true
+      envKey: SUB_STORE_BACKEND_SYNC_CRON
+      labelEn: Sync Cron
+      labelZh: 同步定时任务
+      label:
+        en: Sync Cron
+        zh: 同步定时任务
+        zh-Hant: 同步定時任務
+        ja: 同期 Cron
+        ko: 동기화 Cron
+        ms: Cron Segerak
+        pt-br: Cron de sincronizacao
+        ru: Cron синхронизации
+        tr: Eşitleme Cron
+      description:
+        en: Cron expression for periodically syncing subscriptions/files to a private Gist. Leave empty to disable.
+        zh: 定时将订阅/文件同步到私有 Gist 的 Cron 表达式。留空可禁用。
+      required: false
+      type: text
+    - default: "*"
+      edit: true
+      envKey: SUB_STORE_CORS_ALLOWED_ORIGINS
+      labelEn: CORS Allowed Origins
+      labelZh: CORS 允许来源
+      label:
+        en: CORS Allowed Origins
+        zh: CORS 允许来源
+        zh-Hant: CORS 允許來源
+        ja: CORS 許可オリジン
+        ko: CORS 허용 출처
+        ms: Asal CORS Dibenarkan
+        pt-br: Origens CORS permitidas
+        ru: Разрешенные источники CORS
+        tr: CORS İzin Verilen Kaynaklar
+      description:
+        en: Comma-separated exact browser origins. Use * only when you accept any website reading the local API.
+        zh: 逗号分隔的浏览器来源精确匹配列表。只有接受任意网站读取本地 API 时才使用 *。
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: SUB_STORE_PUSH_SERVICE
+      labelEn: Push Service URL
+      labelZh: 推送服务 URL
+      label:
+        en: Push Service URL
+        zh: 推送服务 URL
+        zh-Hant: 推送服務 URL
+        ja: プッシュサービス URL
+        ko: 푸시 서비스 URL
+        ms: URL Perkhidmatan Tolak
+        pt-br: URL do servico de push
+        ru: URL сервиса push
+        tr: Push Servisi URL
+      description:
+        en: Optional shoutrrr/Bark/PushPlus/Telegram-compatible notification URL.
+        zh: 可选的 shoutrrr、Bark、PushPlus 或 Telegram 兼容通知 URL。
+      required: false
+      type: text
