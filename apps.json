@@ -16,7 +16,9 @@
       "apps": [
         "mautrix-telegram",
         "sub-store",
-        "cli-proxy-api"
+        "cli-proxy-api",
+        "reposilite",
+        "mailpit"
       ]
     }
   ]
