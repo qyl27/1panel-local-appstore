@@ -1,0 +1,30 @@
+additionalProperties:
+  formFields:
+    - default: 8025
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: "Web UI 端口"
+      labelEn: "Web UI Port"
+      label:
+        zh: "Web UI 端口"
+        en: "Web UI Port"
+      description:
+        zh: "Web 界面和 API 共用此端口。"
+        en: "Shared by the web UI and API."
+      required: true
+      rule: paramPort
+      type: number
+    - default: 1025
+      edit: true
+      envKey: PANEL_APP_PORT_SMTP
+      labelZh: "SMTP 端口"
+      labelEn: "SMTP Port"
+      label:
+        zh: "SMTP 端口"
+        en: "SMTP Port"
+      description:
+        zh: "SMTP 协议端口。"
+        en: "SMTP protocol port."
+      required: true
+      rule: paramPort
+      type: number

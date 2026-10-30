@@ -1,0 +1,27 @@
+name: "Reposilite"
+tags:
+  - 开发工具
+title: "轻量级 Maven 仓库管理器"
+description: "轻量级、自托管的 Maven 仓库管理器"
+additionalProperties:
+  key: "reposilite"
+  name: "Reposilite"
+  tags:
+    - DevTool
+    - Maven
+  shortDescZh: "轻量级、自托管的 Maven 仓库管理器"
+  shortDescEn: "Lightweight self-hosted Maven repository manager"
+  description:
+    zh: "Reposilite 是面向 JVM 生态 Maven 构件的轻量级、自托管仓库管理器，支持构件托管、代理、访问 Token 和 Web 控制台。"
+    en: "Reposilite is a lightweight self-hosted repository manager for Maven artifacts in the JVM ecosystem, with artifact hosting, proxying, access tokens, and a web dashboard."
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: "https://reposilite.com"
+  github: "https://github.com/dzikoysk/reposilite"
+  document: "https://reposilite.com/guide/docker"
+  architectures:
+    - amd64
+    - arm64
