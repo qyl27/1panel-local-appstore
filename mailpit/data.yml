@@ -1,0 +1,28 @@
+name: "Mailpit"
+tags:
+  - 邮件服务
+title: "面向开发者的邮件与 SMTP 测试工具"
+description: "通过 SMTP 接收邮件，使用 Web 界面、POP3 或 HTTP API 访问"
+additionalProperties:
+  key: "mailpit"
+  name: "Mailpit"
+  tags:
+    - Email
+    - DevTool
+  shortDescZh: "面向开发者的邮件与 SMTP 测试工具"
+  shortDescEn: "Email and SMTP testing tool for developers"
+  description:
+    zh: "Mailpit 是面向开发者的邮件测试工具，通过 SMTP 协议收件，使用 Web 界面、POP3 或 HTTP API 查看。"
+    en: "Mailpit is an email testing tool for developers that receives messages over SMTP and lets you view them through a web UI, POP3, or HTTP API."
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: "https://mailpit.axllent.org"
+  github: "https://github.com/axllent/mailpit"
+  document: "https://mailpit.axllent.org/docs/"
+  architectures:
+    - amd64
+    - arm64
+    - 386
